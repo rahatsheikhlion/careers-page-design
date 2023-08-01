@@ -16,7 +16,8 @@ body {
 .background {
     width: 100%;
     height: 777px;
-    background-color: #6048C6;
+  background-image: url(imges/background.png);
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -651,10 +652,11 @@ body {
 
 
 .footer-background {
-    background-image: url('imger/footer-background.png');
+    background-image: url('imges/footer-background.png');
     width: 100%;
     margin-top: 120px;
     padding-top: 125px;
+    background-repeat:no-repeat;
 }
 
 
