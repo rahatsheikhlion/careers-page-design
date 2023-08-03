@@ -16,8 +16,8 @@ body {
 .background {
     width: 100%;
     height: 777px;
-  background-image: url(imges/background.png);
-  background-repeat: no-repeat;
+    background-image: url(imges/background.png);
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -66,16 +66,23 @@ body {
     color: #ffffff;
 }
 
+.navigation-logo-menu ul li i{
+font-size: 11px;
+margin-left: 5px;
+}
+
 .account-button {
     display: flex;
     width: 182.85px;
     justify-content: space-between;
+
 
 }
 
 .navigation-Burger,
 .navigation-Burger i {
     display: none;
+    cursor: pointer;
 }
 
 .basket img {
@@ -94,6 +101,7 @@ body {
     align-items: center;
     color: #6048C6;
     margin-right: 16px;
+    cursor: pointer;
 }
 
 
@@ -320,12 +328,20 @@ body {
     padding-top: 15px;
 }
 
-.review-data {
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+
+.slider_container{
+    width: 1050px;
+    height: 337px;
 }
+
+
+
+
+
+.card_slider {
+   
+    margin-top: 30px;
+} 
 
 .data-frame-one {
     background-color: #ffffff;
@@ -388,7 +404,15 @@ body {
     border-radius: 50%;
     background-color: #ffffff;
     margin-top: 150px;
+    transition: 0.5s;
+}
+
+.right-arrow:hover,
+.frame-left-arrow:hover,
+.frame-right-arrow:hover,
+.left-arrow:hover {
     box-shadow: 1px 1px 10px #d5d3d3;
+    transition: 0.5s;
 }
 
 .frame-left-arrow,
@@ -471,12 +495,20 @@ body {
     justify-content: space-around;
     margin-top: 20px;
     border-radius: 5px;
-    box-shadow: 0px 15px 10px -15px #dfdfdf;
 }
 
-.laravel-developer-section {
+.frontend-developer-section:hover,
+.php-developer-section:hover,
+.laravel-developer-section:hover,
+.first-frontend-designer-section:hover,
+.second-frontend-designer-section:hover,
+.technical-section:hover,
+.content-writer-section:hover,
+.junior-content-writer-section:hover {
+
     box-shadow: 0px 15px 50px -15px #b6b5b5;
 }
+
 
 .frontend-developer,
 .php-developer,
@@ -517,9 +549,7 @@ body {
     text-align: left;
 }
 
-.laravel-developer h1 {
-    color: #007CF5;
-}
+
 
 .frontend-developer span,
 .php-developer span,
@@ -604,9 +634,7 @@ body {
     margin-top: 52px;
 }
 
-.laravel-developer-section i {
-    color: #007CF5;
-}
+
 
 /* frontend-section-close */
 
@@ -656,7 +684,7 @@ body {
     width: 100%;
     margin-top: 120px;
     padding-top: 125px;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 
@@ -676,6 +704,16 @@ body {
 .products-section {
     line-height: 37px;
 }
+
+.products-section span:first-child {
+    background-color: red;
+    width: 50px;
+    height: 300px;
+}
+
+
+
+
 
 .footer-data-section {
     display: flex;
@@ -716,7 +754,11 @@ body {
     border-radius: 3px;
     display: flex;
     justify-content: space-around;
-    box-shadow: 0px 15px 10px -15px #cac8c8;
+}
+
+.email-input:hover {
+
+    box-shadow: 0px 15px 50px -15px #b6b5b5;
 }
 
 .email-input input {
@@ -738,6 +780,8 @@ body {
     border-radius: 3px;
     color: #ffffff;
     font-size: 15px;
+    outline: none;
+    cursor: pointer;
 }
 
 .logos {
@@ -815,7 +859,9 @@ body {
 }
 
 
-
+.products-section span img {
+    float: left;
+}
 
 
 
@@ -842,7 +888,7 @@ body {
 }
 
 .up-button-icon {
-    margin-top: 163px;
+    margin-top: 54px;
     height: 62px;
     width: 62px;
     border-radius: 50%;
@@ -871,13 +917,59 @@ body {
 }
 
 
+/*  hover effect */
 
+.email-input button:hover {
+    background-color: #5f80f5;
+}
 
+.frontend-developer-section i:hover,
+.php-developer-section i:hover,
+.laravel-developer-section i:hover,
+.first-frontend-designer-section i:hover,
+.second-frontend-designer-section i:hover,
+.technical-section i:hover,
+.content-writer-section:hover i,
+.junior-content-writer-section i:hover {
+    color: #007CF5;
+}
 
+.frontend-developer h1:hover,
+.php-developer h1:hover,
+.laravel-developer h1:hover,
+.first-frontend-designer h1:hover,
+.second-frontend-designer h1:hover,
+.technical-section-header h1:hover,
+.content-writer-section-header h1:hover,
+.junior-content-writer-section-header h1:hover {
+    color: #007CF5;
+}
 
+.navigation-logo-menu ul li a {
+    position: relative;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
 
+.navigation-logo-menu ul li a::before {
+    content: "";
+    position: absolute;
+    background: #fcfcfc;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: .5s ease-out;
+    margin-top: 500px;
+}
 
+.navigation-logo-menu ul li a:hover::before {
+    transform: scaleX(1);
+}
 
+/* close-hover-effect */
 
 
 
@@ -891,12 +983,6 @@ body {
     .container {
         width: 700px;
     }
-
-
-
-
-
-
 
 
 
@@ -1092,6 +1178,13 @@ body {
         width: 700px;
     }
 
+
+
+
+
+
+
+
     .frontend-developer h1,
     .php-developer h1,
     .laravel-developer h1 {
@@ -1150,405 +1243,413 @@ body {
         visibility: hidden;
     }
 
-.navigation-bar{
-    position: relative;
-    padding: 30px 30px 0px 30px;
-}
-.this-hub-is-for-phones-only{
- display: block;
-    position: relative;
-}
-.navigation-bar-for-phones{
-display: none;
-
-    background: white;
-    width: 50%;
-    margin-left: 43%;
-    position: absolute;
-    border-radius: 5px;
-    padding: 10px
-}
-
-.navigation-bar-for-phones ul{
-    display: block;
-    line-height: 2.5;
-}
-
-.navigation-bar-for-phones ul li a {
-    color: #6048C6;
-    font-size: 15px;
-}
-.account-button-with-phone {
-    display: block;
-}
-
-.basket{
-    background-color: #0079F1;
-    padding: 9px;
-border-radius: 5px;
-}
-.phone-accout-login {
-    height: 38px;
-    width: 135px;
-    background-color: #ffffff;
-    border-radius: 53px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #6048C6;
-
-}
-
-.phone-accout-login button {
-
-border: none;
-    background-color: #ffffff;
-    font-size: 14px;
-    color: #6048C6
-}
-
-        .navigation-Burger i,
-        .navigation-Burger {
-            display: block;
-            font-size: 25px;
-            padding-left: 10px;
-            color: #b3b0b0;
-        }
-
-
-        .header-text-section h1 {
-            margin-top: 100px;
-            font-size: 25px;
-
-        }
-
-        .header-text-section p {
-            font-size: 10px;
-            margin-top: 10px;
-            line-height: 25px;
-        }
-
-        .content-section {
-            height: 85px;
-            width: 101px;
-            flex-direction: column;
-            margin-top: 30px;
-        }
-
-        .content-section a:first-child {
-            padding-top: 10px;
-            font-size: 15px;
-        }
-
-
-        .content-section a:last-child {
-            padding-top: 0px;
-            font-size: 15px;
-            text-align: center;
-        }
-
-        .content-section a {
-            height: 30px;
-            width: 120px
-        }
-
-        .image-first-row,
-        .image-sec-row {
-            display: none;
-        }
-
-        .showing-image-for-phone {
-            display: block;
-        }
-
-
-        .showing-image-for-phone img:nth-child(1),
-        .showing-image-for-phone img:nth-child(2),
-        .showing-image-for-phone img:nth-child(3),
-        .showing-image-for-phone img:nth-child(4),
-        .showing-image-for-phone img:nth-child(5),
-        .showing-image-for-phone img:nth-child(6) {
-            width: 100%;
-        }
-
-
-        .perds-section h3 {
-            font-size: 15px;
-        }
-
-        .perds-section h1 {
-            font-size: 25px;
-        }
-
-        .benefite-section {
-            width: 300px;
-            flex-direction: column;
-            margin-top: 0px;
-        }
-
-        .join-section {
-            height: 30px;
-            width: 180px;
-            padding-top: 10px;
-            margin-top: 65px;
-            font-size: 15px;
-        }
-
-        .review-section {
-            margin-top: 37px;
-            width: 100%;
-        }
-
-        .review-text {
-            width: 90%;
-            margin: auto;
-            padding-bottom: 25.44px;
-        }
-
-        .review-text img {
-            width: 184.68px;
-            height: 64.115px;
-            padding-top: 25.44px;
-        }
-
-        .review-text h1 {
-            font-size: 25px;
-            margin-top: 35px;
-        }
-
-        .review-text h3 {
-            font-size: 15px;
-            margin-top: 17px;
-            margin-bottom: 25.71px;
-        }
-
-        .show-profile-section {
-            height: 30px;
-            width: 177px;
-            font-size: 15px;
-            padding-top: 9px;
-        }
-
-        .left-arrow,
-        .right-arrow {
-            display: none;
-        }
-
-        .review-data {
-            width: 100%;
-            flex-direction: column;
-        }
-
-
-        .data-frame-one {
-            width: 80%;
-            margin: auto;
-            margin-top: 30px;
-            margin-top: 30px;
-            padding-top: 15px;
-            padding-left: 10px;
-        }
-
-        .data-frame-one h4 {
-            font-size: 15px;
-        }
-
-        .data-frame-one h3:first-child {
-            font-size: 17px
-        }
-
-        .approval-section {
-            margin-top: 0px;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .review-header {
-            width: 100%;
-            height: 35px;
-        }
-
-        .developer-section {
-            margin-top: 50px;
-            padding-top: 50px
-        }
-
-        .developer-section-text h3 {
-            font-size: 15px;
-        }
-
-        .developer-section-text h1 {
-            font-size: 25px;
-            padding-top: 15px;
-        }
-
-        .developer-section-text p {
-            font-size: 11px;
-            padding-top: 15px;
-        }
-
-        .engineering-section {
-            margin-top: 35px;
-        }
-
-        .engineering-section h4,
-        .design-section h4,
-        .content-marketing-section h4 {
-            font-size: 20px;
-
-        }
-
-        .frontend-developer-section,
-        .php-developer-section,
-        .laravel-developer-section,
-        .first-frontend-designer-section,
-        .second-frontend-designer-section,
-        .technical-section,
-        .content-writer-section,
-        .junior-content-writer-section {
-            height: 380px;
-            width: 80%;
-            flex-direction: column;
-            padding: 10px;
-            margin: 20px auto;
-        }
-
-
-        .frontend-developer-section i,
-        .php-developer-section i,
-        .laravel-developer-section i,
-        .first-frontend-designer-section i,
-        .second-frontend-designer-section i,
-        .technical-section i,
-        .content-writer-section i,
-        .junior-content-writer-section i {
-            color: #BDC3C7;
-            margin-top: 25px;
-            margin-left: 90%;
-        }
-        .laravel-developer-section i{
-            color: #007CF5;
-        }
-        .engineering-section,
-        .design-section,
-        .content-marketing-section {
-            margin-top: 50px;
-            width: 100%;
-        }
-
-
-        .match-section h1 {
-            font-size: 30px;
-        }
-
-        .match-section span {
-            font-size: 19px;
-        }
-
-        .match-section-button {
-            width: 120px;
-            height: 30px;
-            padding-top: 10px
-        }
-
-        .match-section {
-            margin-top: 60px;
-
-        }
-
-
-        .logo-subscribe-input-section span:first-child,
-        .logo-subscribe-input-section span:last-child {
-            font-size: 20px;
-        }
-
-        .subscribe-header {
-            display: flex;
-            justify-content: space-between;
-            width: 241px;
-        }
-
-
-
-
-        .footer-background {
-            margin-top: 90px;
-            padding-top: 0px;
-        }
-
-
-
-        .footer-data-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-        }
-
-        .email-input {
-            margin: 0 auto;
-        }
-
-        .logo-subscribe-input-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center
-        }
-
-
-        .footer-links {
-            margin-top: 40px;
-            width: 90%;
-            padding-left: 10px;
-        }
-
-        .copy-write-section {
-            width: 100%;
-
-        }
-
-        .company-sarvice-section h1,
-        .resources-section h1,
-        .products-section h1 {
-            color: #2C3646;
-            font-size: 15px;
-            margin-top: 40px;
-            margin-bottom: 5px;
-            text-decoration: underline;
-        }
-
-        .company-sarvice-section span a,
-        .resources-section span a,
-        .products-section span a {
-            font-size: 13px;
-        }
-
-        .copy-write-section span {
-            font-size: 10px;
-        }
-
-        .data-frame-change,
-        .frame-left-arrow,
-        .frame-right-arrow {
-            display: block;
-        }
-
-        .data-frame-change {
-            display: flex;
-            justify-content: space-between;
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .left-arrow,
-        .right-arrow,
-        .frame-left-arrow,
-        .frame-right-arrow {
-            margin-top: 10px
-        }
-
-      
-
-
+    .navigation-bar {
+        position: relative;
+        padding: 30px 30px 0px 30px;
+        cursor: pointer;
+    }
+
+    .this-hub-is-for-phones-only {
+        display: block;
+        position: relative;
+    }
+
+    .navigation-bar-for-phones {
+        display: none;
+
+        background: white;
+        width: 50%;
+        margin-left: 43%;
+        position: absolute;
+        border-radius: 5px;
+        padding: 10px
+    }
+
+    .navigation-bar-for-phones ul {
+        display: block;
+        line-height: 2.5;
+    }
+
+    .navigation-bar-for-phones ul li a {
+        color: #6048C6;
+        font-size: 15px;
+    }
+
+    .account-button-with-phone {
+        display: block;
+    }
+
+    .basket {
+        background-color: #0079F1;
+        padding: 9px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .phone-accout-login {
+        height: 38px;
+        width: 135px;
+        background-color: #ffffff;
+        border-radius: 53px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #6048C6;
+        cursor: pointer;
+    }
+
+    .phone-accout-login button {
+        cursor: pointer;
+        border: none;
+        background-color: #ffffff;
+        font-size: 14px;
+        color: #6048C6
+    }
+
+    .navigation-Burger i,
+    .navigation-Burger {
+        display: block;
+        font-size: 25px;
+        padding-left: 10px;
+        color: #b3b0b0;
+    }
+
+
+    .header-text-section h1 {
+        margin-top: 100px;
+        font-size: 25px;
 
     }
+
+    .header-text-section p {
+        font-size: 10px;
+        margin-top: 10px;
+        line-height: 25px;
+    }
+
+    .content-section {
+        height: 85px;
+        width: 101px;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .content-section a:first-child {
+        padding-top: 10px;
+        font-size: 15px;
+    }
+
+
+    .content-section a:last-child {
+        padding-top: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .content-section a {
+        height: 30px;
+        width: 120px
+    }
+
+    .image-first-row,
+    .image-sec-row {
+        display: none;
+    }
+
+    .showing-image-for-phone {
+        display: block;
+    }
+
+
+    .showing-image-for-phone img:nth-child(1),
+    .showing-image-for-phone img:nth-child(2),
+    .showing-image-for-phone img:nth-child(3),
+    .showing-image-for-phone img:nth-child(4),
+    .showing-image-for-phone img:nth-child(5),
+    .showing-image-for-phone img:nth-child(6) {
+        width: 100%;
+    }
+
+
+    .perds-section h3 {
+        font-size: 15px;
+    }
+
+    .perds-section h1 {
+        font-size: 25px;
+    }
+
+    .benefite-section {
+        width: 300px;
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .join-section {
+        height: 30px;
+        width: 180px;
+        padding-top: 10px;
+        margin-top: 65px;
+        font-size: 15px;
+    }
+
+    .review-section {
+        margin-top: 37px;
+        width: 100%;
+    }
+
+    .review-text {
+        width: 90%;
+        margin: auto;
+        padding-bottom: 25.44px;
+    }
+
+    .review-text img {
+        width: 184.68px;
+        height: 64.115px;
+        padding-top: 25.44px;
+    }
+
+    .review-text h1 {
+        font-size: 25px;
+        margin-top: 35px;
+    }
+
+    .review-text h3 {
+        font-size: 15px;
+        margin-top: 17px;
+        margin-bottom: 25.71px;
+    }
+
+    .show-profile-section {
+        height: 30px;
+        width: 177px;
+        font-size: 15px;
+        padding-top: 9px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        display: none;
+    }
+
+    .review-data {
+        width: 100%;
+        flex-direction: column;
+    }
+
+
+    .data-frame-one {
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        margin-top: 30px;
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+
+    .data-frame-one h4 {
+        font-size: 15px;
+    }
+
+    .data-frame-one h3:first-child {
+        font-size: 17px
+    }
+
+    .approval-section {
+        margin-top: 0px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .review-header {
+        width: 100%;
+        height: 35px;
+    }
+
+    .developer-section {
+        margin-top: 50px;
+        padding-top: 50px
+    }
+
+    .developer-section-text h3 {
+        font-size: 15px;
+    }
+
+    .developer-section-text h1 {
+        font-size: 25px;
+        padding-top: 15px;
+    }
+
+    .developer-section-text p {
+        font-size: 11px;
+        padding-top: 15px;
+    }
+
+    .engineering-section {
+        margin-top: 35px;
+    }
+
+    .engineering-section h4,
+    .design-section h4,
+    .content-marketing-section h4 {
+        font-size: 20px;
+
+    }
+
+    .frontend-developer-section,
+    .php-developer-section,
+    .laravel-developer-section,
+    .first-frontend-designer-section,
+    .second-frontend-designer-section,
+    .technical-section,
+    .content-writer-section,
+    .junior-content-writer-section {
+        height: 380px;
+        width: 80%;
+        flex-direction: column;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+
+    .frontend-developer-section i,
+    .php-developer-section i,
+    .laravel-developer-section i,
+    .first-frontend-designer-section i,
+    .second-frontend-designer-section i,
+    .technical-section i,
+    .content-writer-section i,
+    .junior-content-writer-section i {
+        color: #BDC3C7;
+        margin-top: 25px;
+        margin-left: 90%;
+    }
+
+    .laravel-developer-section i {
+        color: #007CF5;
+    }
+
+    .engineering-section,
+    .design-section,
+    .content-marketing-section {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+
+    .match-section h1 {
+        font-size: 30px;
+    }
+
+    .match-section span {
+        font-size: 19px;
+    }
+
+    .match-section-button {
+        width: 120px;
+        height: 30px;
+        padding-top: 10px
+    }
+
+    .match-section {
+        margin-top: 60px;
+
+    }
+
+
+    .logo-subscribe-input-section span:first-child,
+    .logo-subscribe-input-section span:last-child {
+        font-size: 20px;
+    }
+
+    .subscribe-header {
+        display: flex;
+        justify-content: space-between;
+        width: 241px;
+    }
+
+
+
+
+    .footer-background {
+        margin-top: 90px;
+        padding-top: 0px;
+    }
+
+
+
+    .footer-data-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .email-input {
+        margin: 0 auto;
+    }
+
+    .logo-subscribe-input-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+
+    .footer-links {
+        margin-top: 40px;
+        width: 90%;
+        padding-left: 10px;
+    }
+
+    .copy-write-section {
+        width: 100%;
+
+    }
+
+    .company-sarvice-section h1,
+    .resources-section h1,
+    .products-section h1 {
+        color: #2C3646;
+        font-size: 15px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+        text-decoration: underline;
+    }
+
+    .company-sarvice-section span a,
+    .resources-section span a,
+    .products-section span a {
+        font-size: 13px;
+    }
+
+    .copy-write-section span {
+        font-size: 10px;
+    }
+
+    .data-frame-change,
+    .frame-left-arrow,
+    .frame-right-arrow {
+        display: block;
+    }
+
+    .data-frame-change {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .left-arrow,
+    .right-arrow,
+    .frame-left-arrow,
+    .frame-right-arrow {
+        margin-top: 10px
+    }
+
+
+
+
+
+}
